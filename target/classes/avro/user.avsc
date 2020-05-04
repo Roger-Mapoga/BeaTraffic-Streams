@@ -1,0 +1,10 @@
+{
+     "type": "record",
+     "namespace": "co.za.gmapssolutions.beatraffic.streams",
+     "name": "User",
+     "version": "1",
+     "fields": [
+       { "name": "user_id", "type": "long", "doc": "user id" },
+       { "name": "vehicle_type", "type": "string", "doc": "user veicle type" }
+     ]
+}

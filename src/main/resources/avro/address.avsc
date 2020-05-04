@@ -1,0 +1,16 @@
+{
+     "type": "record",
+     "namespace": "co.za.gmapssolutions.beatraffic.streams",
+     "name": "Address",
+     "version": "1",
+     "fields": [
+       { "name": "user_id", "type": "long", "doc": "user id" },
+       { "name": "street_name", "type":  ["null", "string"], "default": null , "doc": "Street name" },
+       { "name": "postal_code", "type": "string", "doc": "Postal code" },
+       { "name": "city", "type": "string", "doc": "city" },
+       { "name": "country", "type": "string", "doc": "country" },
+       { "name": "provence", "type": ["null", "string"], "default": null, "doc": "provence"},
+       { "name": "latitude", "type": ["null","double"], "default": null, "doc": "latitude"},
+       { "name": "longitude", "type": ["null","double"], "default": null, "doc": "longitude"}
+     ]
+}
