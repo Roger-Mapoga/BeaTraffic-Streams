@@ -1,5 +1,7 @@
 package co.za.gmapssolutions.beatraffic.streams;
 
+import co.za.gmapssolutions.beatrafficrestproducer.Address;
+import co.za.gmapssolutions.beatrafficrestproducer.User;
 import io.confluent.kafka.serializers.KafkaAvroDecoder;
 import io.confluent.kafka.serializers.KafkaAvroDeserializer;
 import io.confluent.kafka.serializers.KafkaAvroSerializer;
@@ -28,23 +30,23 @@ public class BeaTrafficStreamsApp {
 
     public static void main(String[] args) {
         Properties config = new Properties();
-        config.put(StreamsConfig.APPLICATION_ID_CONFIG, "beatraffic-application");
+        config.put(StreamsConfig.APPLICATION_ID_CONFIG, "beatraffic-application4");
         config.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:9092");
         config.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
 
-        config.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.Long().getClass().getName());
-        config.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, SpecificAvroSerde.class);
+//      config.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.Long().getClass());
+//      config.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, SpecificAvroSerde.class);
         //
-        config.setProperty(KafkaAvroSerializerConfig.SCHEMA_REGISTRY_URL_CONFIG, "http://127.0.0.1:8081");
+      //config.setProperty(KafkaAvroSerializerConfig.SCHEMA_REGISTRY_URL_CONFIG, "http://127.0.0.1:8081");
 
-//        config.put(StreamsConfig.CACHE_MAX_BYTES_BUFFERING_CONFIG, "0");
+//      config.put(StreamsConfig.CACHE_MAX_BYTES_BUFFERING_CONFIG, "0");
 
-        //config.put(StreamsConfig.PROCESSING_GUARANTEE_CONFIG, StreamsConfig.EXACTLY_ONCE);
+//      config.put(StreamsConfig.PROCESSING_GUARANTEE_CONFIG, StreamsConfig.EXACTLY_ONCE);
 
         StreamsBuilder builder = new StreamsBuilder();
-// When you want to override serdes explicitly/selectively
+        // When you want to override serdes explicitly/selectively
         final Map<String, String> serdeConfig = Collections.singletonMap("schema.registry.url",
-                "http://my-schema-registry:8081");
+                "http://127.0.0.1:8081");
         final Serde<Long> longKeySerde = new Serdes.LongSerde();
         longKeySerde.configure(serdeConfig, true); // `true` for record keys
         final Serde<Address> specificAvroValueSerde = new SpecificAvroSerde();
@@ -55,7 +57,7 @@ public class BeaTrafficStreamsApp {
         System.out.println("Running");
             KStream<Long, Address> departureAddress =
                 builder.stream("beatraffic-departure",Consumed.with(longKeySerde,specificAvroValueSerde));
-
+//
         KStream<Long, Address> destinationAddress =
                 builder.stream("beatraffic-destination",Consumed.with(longKeySerde,specificAvroValueSerde));
 
@@ -67,7 +69,6 @@ public class BeaTrafficStreamsApp {
             user.print(Printed.toSysOut());
             departureAddress.print(Printed.toSysOut());
             destinationAddress.print(Printed.toSysOut());
-
 
             KafkaStreams streams = new KafkaStreams(builder.build(), config);
             streams.cleanUp();

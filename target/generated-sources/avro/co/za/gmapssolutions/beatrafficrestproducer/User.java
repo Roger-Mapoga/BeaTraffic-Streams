@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package co.za.gmapssolutions.beatraffic.streams;
+package co.za.gmapssolutions.beatrafficrestproducer;
 
 import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class User extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 3438378906404908387L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"User\",\"namespace\":\"co.za.gmapssolutions.beatraffic.streams\",\"fields\":[{\"name\":\"user_id\",\"type\":\"long\",\"doc\":\"user id\"},{\"name\":\"vehicle_type\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"user veicle type\"}],\"version\":\"1\"}");
+  private static final long serialVersionUID = -3702273036532378697L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"User\",\"namespace\":\"co.za.gmapssolutions.beatrafficrestproducer\",\"fields\":[{\"name\":\"user_id\",\"type\":\"long\",\"doc\":\"user id\"},{\"name\":\"vehicle_type\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"user veicle type\"}],\"version\":\"1\"}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -138,8 +138,8 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
    * Creates a new User RecordBuilder.
    * @return A new User RecordBuilder
    */
-  public static co.za.gmapssolutions.beatraffic.streams.User.Builder newBuilder() {
-    return new co.za.gmapssolutions.beatraffic.streams.User.Builder();
+  public static co.za.gmapssolutions.beatrafficrestproducer.User.Builder newBuilder() {
+    return new co.za.gmapssolutions.beatrafficrestproducer.User.Builder();
   }
 
   /**
@@ -147,11 +147,11 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
    * @param other The existing builder to copy.
    * @return A new User RecordBuilder
    */
-  public static co.za.gmapssolutions.beatraffic.streams.User.Builder newBuilder(co.za.gmapssolutions.beatraffic.streams.User.Builder other) {
+  public static co.za.gmapssolutions.beatrafficrestproducer.User.Builder newBuilder(co.za.gmapssolutions.beatrafficrestproducer.User.Builder other) {
     if (other == null) {
-      return new co.za.gmapssolutions.beatraffic.streams.User.Builder();
+      return new co.za.gmapssolutions.beatrafficrestproducer.User.Builder();
     } else {
-      return new co.za.gmapssolutions.beatraffic.streams.User.Builder(other);
+      return new co.za.gmapssolutions.beatrafficrestproducer.User.Builder(other);
     }
   }
 
@@ -160,11 +160,11 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
    * @param other The existing instance to copy.
    * @return A new User RecordBuilder
    */
-  public static co.za.gmapssolutions.beatraffic.streams.User.Builder newBuilder(co.za.gmapssolutions.beatraffic.streams.User other) {
+  public static co.za.gmapssolutions.beatrafficrestproducer.User.Builder newBuilder(co.za.gmapssolutions.beatrafficrestproducer.User other) {
     if (other == null) {
-      return new co.za.gmapssolutions.beatraffic.streams.User.Builder();
+      return new co.za.gmapssolutions.beatrafficrestproducer.User.Builder();
     } else {
-      return new co.za.gmapssolutions.beatraffic.streams.User.Builder(other);
+      return new co.za.gmapssolutions.beatrafficrestproducer.User.Builder(other);
     }
   }
 
@@ -189,7 +189,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(co.za.gmapssolutions.beatraffic.streams.User.Builder other) {
+    private Builder(co.za.gmapssolutions.beatrafficrestproducer.User.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.user_id)) {
         this.user_id = data().deepCopy(fields()[0].schema(), other.user_id);
@@ -205,7 +205,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
      * Creates a Builder by copying an existing User instance
      * @param other The existing instance to copy.
      */
-    private Builder(co.za.gmapssolutions.beatraffic.streams.User other) {
+    private Builder(co.za.gmapssolutions.beatrafficrestproducer.User other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.user_id)) {
         this.user_id = data().deepCopy(fields()[0].schema(), other.user_id);
@@ -233,7 +233,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       * @param value The value of 'user_id'.
       * @return This builder.
       */
-    public co.za.gmapssolutions.beatraffic.streams.User.Builder setUserId(long value) {
+    public co.za.gmapssolutions.beatrafficrestproducer.User.Builder setUserId(long value) {
       validate(fields()[0], value);
       this.user_id = value;
       fieldSetFlags()[0] = true;
@@ -255,7 +255,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       * user id
       * @return This builder.
       */
-    public co.za.gmapssolutions.beatraffic.streams.User.Builder clearUserId() {
+    public co.za.gmapssolutions.beatrafficrestproducer.User.Builder clearUserId() {
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -276,7 +276,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       * @param value The value of 'vehicle_type'.
       * @return This builder.
       */
-    public co.za.gmapssolutions.beatraffic.streams.User.Builder setVehicleType(java.lang.String value) {
+    public co.za.gmapssolutions.beatrafficrestproducer.User.Builder setVehicleType(java.lang.String value) {
       validate(fields()[1], value);
       this.vehicle_type = value;
       fieldSetFlags()[1] = true;
@@ -298,7 +298,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       * user veicle type
       * @return This builder.
       */
-    public co.za.gmapssolutions.beatraffic.streams.User.Builder clearVehicleType() {
+    public co.za.gmapssolutions.beatrafficrestproducer.User.Builder clearVehicleType() {
       vehicle_type = null;
       fieldSetFlags()[1] = false;
       return this;

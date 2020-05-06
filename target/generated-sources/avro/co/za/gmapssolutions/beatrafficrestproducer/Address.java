@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package co.za.gmapssolutions.beatraffic.streams;
+package co.za.gmapssolutions.beatrafficrestproducer;
 
 import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Address extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -345515798437295664L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Address\",\"namespace\":\"co.za.gmapssolutions.beatraffic.streams\",\"fields\":[{\"name\":\"user_id\",\"type\":\"long\",\"doc\":\"user id\"},{\"name\":\"street_name\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"doc\":\"Street name\",\"default\":null},{\"name\":\"postal_code\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"Postal code\"},{\"name\":\"city\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"city\"},{\"name\":\"country\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"country\"},{\"name\":\"provence\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"doc\":\"provence\",\"default\":null},{\"name\":\"latitude\",\"type\":[\"null\",\"double\"],\"doc\":\"latitude\",\"default\":null},{\"name\":\"longitude\",\"type\":[\"null\",\"double\"],\"doc\":\"longitude\",\"default\":null}],\"version\":\"1\"}");
+  private static final long serialVersionUID = -7629880729622696783L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Address\",\"namespace\":\"co.za.gmapssolutions.beatrafficrestproducer\",\"fields\":[{\"name\":\"user_id\",\"type\":\"long\",\"doc\":\"user id\"},{\"name\":\"street_name\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"doc\":\"Street name\",\"default\":null},{\"name\":\"postal_code\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"Postal code\"},{\"name\":\"city\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"city\"},{\"name\":\"country\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"country\"},{\"name\":\"provence\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}],\"doc\":\"provence\",\"default\":null},{\"name\":\"latitude\",\"type\":[\"null\",\"double\"],\"doc\":\"latitude\",\"default\":null},{\"name\":\"longitude\",\"type\":[\"null\",\"double\"],\"doc\":\"longitude\",\"default\":null}],\"version\":\"1\"}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -234,8 +234,8 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
    * Creates a new Address RecordBuilder.
    * @return A new Address RecordBuilder
    */
-  public static co.za.gmapssolutions.beatraffic.streams.Address.Builder newBuilder() {
-    return new co.za.gmapssolutions.beatraffic.streams.Address.Builder();
+  public static co.za.gmapssolutions.beatrafficrestproducer.Address.Builder newBuilder() {
+    return new co.za.gmapssolutions.beatrafficrestproducer.Address.Builder();
   }
 
   /**
@@ -243,11 +243,11 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
    * @param other The existing builder to copy.
    * @return A new Address RecordBuilder
    */
-  public static co.za.gmapssolutions.beatraffic.streams.Address.Builder newBuilder(co.za.gmapssolutions.beatraffic.streams.Address.Builder other) {
+  public static co.za.gmapssolutions.beatrafficrestproducer.Address.Builder newBuilder(co.za.gmapssolutions.beatrafficrestproducer.Address.Builder other) {
     if (other == null) {
-      return new co.za.gmapssolutions.beatraffic.streams.Address.Builder();
+      return new co.za.gmapssolutions.beatrafficrestproducer.Address.Builder();
     } else {
-      return new co.za.gmapssolutions.beatraffic.streams.Address.Builder(other);
+      return new co.za.gmapssolutions.beatrafficrestproducer.Address.Builder(other);
     }
   }
 
@@ -256,11 +256,11 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
    * @param other The existing instance to copy.
    * @return A new Address RecordBuilder
    */
-  public static co.za.gmapssolutions.beatraffic.streams.Address.Builder newBuilder(co.za.gmapssolutions.beatraffic.streams.Address other) {
+  public static co.za.gmapssolutions.beatrafficrestproducer.Address.Builder newBuilder(co.za.gmapssolutions.beatrafficrestproducer.Address other) {
     if (other == null) {
-      return new co.za.gmapssolutions.beatraffic.streams.Address.Builder();
+      return new co.za.gmapssolutions.beatrafficrestproducer.Address.Builder();
     } else {
-      return new co.za.gmapssolutions.beatraffic.streams.Address.Builder(other);
+      return new co.za.gmapssolutions.beatrafficrestproducer.Address.Builder(other);
     }
   }
 
@@ -297,7 +297,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(co.za.gmapssolutions.beatraffic.streams.Address.Builder other) {
+    private Builder(co.za.gmapssolutions.beatrafficrestproducer.Address.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.user_id)) {
         this.user_id = data().deepCopy(fields()[0].schema(), other.user_id);
@@ -337,7 +337,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
      * Creates a Builder by copying an existing Address instance
      * @param other The existing instance to copy.
      */
-    private Builder(co.za.gmapssolutions.beatraffic.streams.Address other) {
+    private Builder(co.za.gmapssolutions.beatrafficrestproducer.Address other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.user_id)) {
         this.user_id = data().deepCopy(fields()[0].schema(), other.user_id);
@@ -389,7 +389,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * @param value The value of 'user_id'.
       * @return This builder.
       */
-    public co.za.gmapssolutions.beatraffic.streams.Address.Builder setUserId(long value) {
+    public co.za.gmapssolutions.beatrafficrestproducer.Address.Builder setUserId(long value) {
       validate(fields()[0], value);
       this.user_id = value;
       fieldSetFlags()[0] = true;
@@ -411,7 +411,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * user id
       * @return This builder.
       */
-    public co.za.gmapssolutions.beatraffic.streams.Address.Builder clearUserId() {
+    public co.za.gmapssolutions.beatrafficrestproducer.Address.Builder clearUserId() {
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -432,7 +432,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * @param value The value of 'street_name'.
       * @return This builder.
       */
-    public co.za.gmapssolutions.beatraffic.streams.Address.Builder setStreetName(java.lang.String value) {
+    public co.za.gmapssolutions.beatrafficrestproducer.Address.Builder setStreetName(java.lang.String value) {
       validate(fields()[1], value);
       this.street_name = value;
       fieldSetFlags()[1] = true;
@@ -454,7 +454,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * Street name
       * @return This builder.
       */
-    public co.za.gmapssolutions.beatraffic.streams.Address.Builder clearStreetName() {
+    public co.za.gmapssolutions.beatrafficrestproducer.Address.Builder clearStreetName() {
       street_name = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -476,7 +476,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * @param value The value of 'postal_code'.
       * @return This builder.
       */
-    public co.za.gmapssolutions.beatraffic.streams.Address.Builder setPostalCode(java.lang.String value) {
+    public co.za.gmapssolutions.beatrafficrestproducer.Address.Builder setPostalCode(java.lang.String value) {
       validate(fields()[2], value);
       this.postal_code = value;
       fieldSetFlags()[2] = true;
@@ -498,7 +498,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * Postal code
       * @return This builder.
       */
-    public co.za.gmapssolutions.beatraffic.streams.Address.Builder clearPostalCode() {
+    public co.za.gmapssolutions.beatrafficrestproducer.Address.Builder clearPostalCode() {
       postal_code = null;
       fieldSetFlags()[2] = false;
       return this;
@@ -520,7 +520,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * @param value The value of 'city'.
       * @return This builder.
       */
-    public co.za.gmapssolutions.beatraffic.streams.Address.Builder setCity(java.lang.String value) {
+    public co.za.gmapssolutions.beatrafficrestproducer.Address.Builder setCity(java.lang.String value) {
       validate(fields()[3], value);
       this.city = value;
       fieldSetFlags()[3] = true;
@@ -542,7 +542,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * city
       * @return This builder.
       */
-    public co.za.gmapssolutions.beatraffic.streams.Address.Builder clearCity() {
+    public co.za.gmapssolutions.beatrafficrestproducer.Address.Builder clearCity() {
       city = null;
       fieldSetFlags()[3] = false;
       return this;
@@ -564,7 +564,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * @param value The value of 'country'.
       * @return This builder.
       */
-    public co.za.gmapssolutions.beatraffic.streams.Address.Builder setCountry(java.lang.String value) {
+    public co.za.gmapssolutions.beatrafficrestproducer.Address.Builder setCountry(java.lang.String value) {
       validate(fields()[4], value);
       this.country = value;
       fieldSetFlags()[4] = true;
@@ -586,7 +586,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * country
       * @return This builder.
       */
-    public co.za.gmapssolutions.beatraffic.streams.Address.Builder clearCountry() {
+    public co.za.gmapssolutions.beatrafficrestproducer.Address.Builder clearCountry() {
       country = null;
       fieldSetFlags()[4] = false;
       return this;
@@ -608,7 +608,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * @param value The value of 'provence'.
       * @return This builder.
       */
-    public co.za.gmapssolutions.beatraffic.streams.Address.Builder setProvence(java.lang.String value) {
+    public co.za.gmapssolutions.beatrafficrestproducer.Address.Builder setProvence(java.lang.String value) {
       validate(fields()[5], value);
       this.provence = value;
       fieldSetFlags()[5] = true;
@@ -630,7 +630,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * provence
       * @return This builder.
       */
-    public co.za.gmapssolutions.beatraffic.streams.Address.Builder clearProvence() {
+    public co.za.gmapssolutions.beatrafficrestproducer.Address.Builder clearProvence() {
       provence = null;
       fieldSetFlags()[5] = false;
       return this;
@@ -652,7 +652,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * @param value The value of 'latitude'.
       * @return This builder.
       */
-    public co.za.gmapssolutions.beatraffic.streams.Address.Builder setLatitude(java.lang.Double value) {
+    public co.za.gmapssolutions.beatrafficrestproducer.Address.Builder setLatitude(java.lang.Double value) {
       validate(fields()[6], value);
       this.latitude = value;
       fieldSetFlags()[6] = true;
@@ -674,7 +674,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * latitude
       * @return This builder.
       */
-    public co.za.gmapssolutions.beatraffic.streams.Address.Builder clearLatitude() {
+    public co.za.gmapssolutions.beatrafficrestproducer.Address.Builder clearLatitude() {
       latitude = null;
       fieldSetFlags()[6] = false;
       return this;
@@ -696,7 +696,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * @param value The value of 'longitude'.
       * @return This builder.
       */
-    public co.za.gmapssolutions.beatraffic.streams.Address.Builder setLongitude(java.lang.Double value) {
+    public co.za.gmapssolutions.beatrafficrestproducer.Address.Builder setLongitude(java.lang.Double value) {
       validate(fields()[7], value);
       this.longitude = value;
       fieldSetFlags()[7] = true;
@@ -718,7 +718,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * longitude
       * @return This builder.
       */
-    public co.za.gmapssolutions.beatraffic.streams.Address.Builder clearLongitude() {
+    public co.za.gmapssolutions.beatrafficrestproducer.Address.Builder clearLongitude() {
       longitude = null;
       fieldSetFlags()[7] = false;
       return this;

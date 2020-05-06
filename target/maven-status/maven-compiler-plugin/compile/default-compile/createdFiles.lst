@@ -1,7 +1,3 @@
-co/za/gmapssolutions/beatraffic/streams/User$1.class
-co/za/gmapssolutions/beatraffic/streams/BeaTrafficStreamsApp.class
-co/za/gmapssolutions/beatraffic/streams/User$Builder.class
-co/za/gmapssolutions/beatraffic/streams/Address$1.class
-co/za/gmapssolutions/beatraffic/streams/Address.class
-co/za/gmapssolutions/beatraffic/streams/Address$Builder.class
-co/za/gmapssolutions/beatraffic/streams/User.class
+co/za/gmapssolutions/beatrafficrestproducer/Address$1.class
+co/za/gmapssolutions/beatrafficrestproducer/Address$Builder.class
+co/za/gmapssolutions/beatrafficrestproducer/Address.class
