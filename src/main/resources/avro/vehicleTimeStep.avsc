@@ -1,0 +1,13 @@
+{
+     "type": "record",
+     "namespace": "co.za.gmapssolutions.beatraffic",
+     "name": "VehicleTimeStep",
+     "version": "1",
+     "fields": [
+       { "name": "user_id", "type": "float", "doc": "user id" },
+       { "name": "time", "type": "string", "doc": "time" },
+       { "name": "vehicle_type", "type": "string", "doc": "user veicle type" },
+       { "name": "latitude", "type": ["null","double"], "default": null, "doc": "latitude"},
+       { "name": "longitude", "type": ["null","double"], "default": null, "doc": "longitude"}
+     ]
+}

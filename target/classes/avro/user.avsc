@@ -1,6 +1,6 @@
 {
      "type": "record",
-     "namespace": "co.za.gmapssolutions.beatrafficrestproducer",
+     "namespace": "co.za.gmapssolutions.beatraffic",
      "name": "User",
      "version": "1",
      "fields": [

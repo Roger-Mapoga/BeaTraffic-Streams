@@ -1,0 +1,26 @@
+{
+    "type": "record",
+    "namespace": "co.za.gmapssolutions.beatraffic",
+    "name": "Route",
+    "version": "1",
+    "fields": [
+        { "name": "user_id", "type": "long", "doc": "user id" },
+        { "name": "route_id", "type":  ["null", "int"], "default": null,"doc": "route id" },
+        { "name": "route", "type":{ "type" : "array",
+                                            "items":{
+                                            "name": "GeoPoint",
+                                            "type" : "record",
+                                            "fields" : [
+                                                        {
+                                                            "name" : "longitude",
+                                                            "type" : "double"
+                                                        },{
+                                                            "name" : "latitude",
+                                                            "type" : "double"
+                                                        }
+                                                    ]
+                                                 }
+                                            }
+                                        }
+    ]
+}
