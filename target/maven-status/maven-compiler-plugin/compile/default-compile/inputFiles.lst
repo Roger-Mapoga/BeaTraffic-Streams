@@ -1,7 +1,11 @@
 /home/roger/Projects/BeaTraffic-Kafka-Streams/target/generated-sources/avro/co/za/gmapssolutions/beatraffic/Address.java
 /home/roger/Projects/BeaTraffic-Kafka-Streams/target/generated-sources/avro/co/za/gmapssolutions/beatraffic/Route.java
 /home/roger/Projects/BeaTraffic-Kafka-Streams/target/generated-sources/avro/co/za/gmapssolutions/beatraffic/VehicleTimeStep.java
+/home/roger/Projects/BeaTraffic-Kafka-Streams/src/main/java/co/za/gmapssolutions/beatraffic/streams/model/LSTMS.java
+/home/roger/Projects/BeaTraffic-Kafka-Streams/src/main/java/co/za/gmapssolutions/beatraffic/streams/model/eSNN.java
 /home/roger/Projects/BeaTraffic-Kafka-Streams/src/main/java/co/za/gmapssolutions/beatraffic/streams/BeaTrafficStreamsApp.java
+/home/roger/Projects/BeaTraffic-Kafka-Streams/src/main/java/co/za/gmapssolutions/beatraffic/streams/StreamsProcessorSupplier.java
 /home/roger/Projects/BeaTraffic-Kafka-Streams/src/main/java/co/za/gmapssolutions/beatraffic/streams/BeaTraffic.java
 /home/roger/Projects/BeaTraffic-Kafka-Streams/target/generated-sources/avro/co/za/gmapssolutions/beatraffic/GeoPoint.java
 /home/roger/Projects/BeaTraffic-Kafka-Streams/target/generated-sources/avro/co/za/gmapssolutions/beatraffic/User.java
+/home/roger/Projects/BeaTraffic-Kafka-Streams/src/main/java/co/za/gmapssolutions/beatraffic/streams/model/KNN.java

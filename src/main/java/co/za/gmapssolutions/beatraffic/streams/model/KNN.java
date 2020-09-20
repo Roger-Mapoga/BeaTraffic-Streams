@@ -8,4 +8,7 @@ public class KNN {
                 Math.pow((nLat - mLat),2)
         );
     }
+//    public Double getNearestNeighbour(){
+//        return
+//    }
 }

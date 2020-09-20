@@ -4,7 +4,7 @@
      "name": "VehicleTimeStep",
      "version": "1",
      "fields": [
-       { "name": "user_id", "type": "float", "doc": "user id" },
+       { "name": "user_id", "type": "long", "doc": "user id" },
        { "name": "time", "type": "string", "doc": "time" },
        { "name": "vehicle_type", "type": "string", "doc": "user veicle type" },
        { "name": "latitude", "type": ["null","double"], "default": null, "doc": "latitude"},

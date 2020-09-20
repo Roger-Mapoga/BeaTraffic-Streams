@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class VehicleTimeStep extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 8314224184823577281L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"VehicleTimeStep\",\"namespace\":\"co.za.gmapssolutions.beatraffic\",\"fields\":[{\"name\":\"user_id\",\"type\":\"float\",\"doc\":\"user id\"},{\"name\":\"time\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"time\"},{\"name\":\"vehicle_type\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"user veicle type\"},{\"name\":\"latitude\",\"type\":[\"null\",\"double\"],\"doc\":\"latitude\",\"default\":null},{\"name\":\"longitude\",\"type\":[\"null\",\"double\"],\"doc\":\"longitude\",\"default\":null}],\"version\":\"1\"}");
+  private static final long serialVersionUID = -8258593629448677539L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"VehicleTimeStep\",\"namespace\":\"co.za.gmapssolutions.beatraffic\",\"fields\":[{\"name\":\"user_id\",\"type\":\"long\",\"doc\":\"user id\"},{\"name\":\"time\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"time\"},{\"name\":\"vehicle_type\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"user veicle type\"},{\"name\":\"latitude\",\"type\":[\"null\",\"double\"],\"doc\":\"latitude\",\"default\":null},{\"name\":\"longitude\",\"type\":[\"null\",\"double\"],\"doc\":\"longitude\",\"default\":null}],\"version\":\"1\"}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -72,7 +72,7 @@ public class VehicleTimeStep extends org.apache.avro.specific.SpecificRecordBase
   }
 
   /** user id */
-   private float user_id;
+   private long user_id;
   /** time */
    private java.lang.String time;
   /** user veicle type */
@@ -97,7 +97,7 @@ public class VehicleTimeStep extends org.apache.avro.specific.SpecificRecordBase
    * @param latitude latitude
    * @param longitude longitude
    */
-  public VehicleTimeStep(java.lang.Float user_id, java.lang.String time, java.lang.String vehicle_type, java.lang.Double latitude, java.lang.Double longitude) {
+  public VehicleTimeStep(java.lang.Long user_id, java.lang.String time, java.lang.String vehicle_type, java.lang.Double latitude, java.lang.Double longitude) {
     this.user_id = user_id;
     this.time = time;
     this.vehicle_type = vehicle_type;
@@ -123,7 +123,7 @@ public class VehicleTimeStep extends org.apache.avro.specific.SpecificRecordBase
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: user_id = (java.lang.Float)value$; break;
+    case 0: user_id = (java.lang.Long)value$; break;
     case 1: time = value$ != null ? value$.toString() : null; break;
     case 2: vehicle_type = value$ != null ? value$.toString() : null; break;
     case 3: latitude = (java.lang.Double)value$; break;
@@ -136,7 +136,7 @@ public class VehicleTimeStep extends org.apache.avro.specific.SpecificRecordBase
    * Gets the value of the 'user_id' field.
    * @return user id
    */
-  public float getUserId() {
+  public long getUserId() {
     return user_id;
   }
 
@@ -224,7 +224,7 @@ public class VehicleTimeStep extends org.apache.avro.specific.SpecificRecordBase
     implements org.apache.avro.data.RecordBuilder<VehicleTimeStep> {
 
     /** user id */
-    private float user_id;
+    private long user_id;
     /** time */
     private java.lang.String time;
     /** user veicle type */
@@ -300,7 +300,7 @@ public class VehicleTimeStep extends org.apache.avro.specific.SpecificRecordBase
       * user id
       * @return The value.
       */
-    public float getUserId() {
+    public long getUserId() {
       return user_id;
     }
 
@@ -311,7 +311,7 @@ public class VehicleTimeStep extends org.apache.avro.specific.SpecificRecordBase
       * @param value The value of 'user_id'.
       * @return This builder.
       */
-    public co.za.gmapssolutions.beatraffic.VehicleTimeStep.Builder setUserId(float value) {
+    public co.za.gmapssolutions.beatraffic.VehicleTimeStep.Builder setUserId(long value) {
       validate(fields()[0], value);
       this.user_id = value;
       fieldSetFlags()[0] = true;
@@ -519,7 +519,7 @@ public class VehicleTimeStep extends org.apache.avro.specific.SpecificRecordBase
     public VehicleTimeStep build() {
       try {
         VehicleTimeStep record = new VehicleTimeStep();
-        record.user_id = fieldSetFlags()[0] ? this.user_id : (java.lang.Float) defaultValue(fields()[0]);
+        record.user_id = fieldSetFlags()[0] ? this.user_id : (java.lang.Long) defaultValue(fields()[0]);
         record.time = fieldSetFlags()[1] ? this.time : (java.lang.String) defaultValue(fields()[1]);
         record.vehicle_type = fieldSetFlags()[2] ? this.vehicle_type : (java.lang.String) defaultValue(fields()[2]);
         record.latitude = fieldSetFlags()[3] ? this.latitude : (java.lang.Double) defaultValue(fields()[3]);
@@ -556,7 +556,7 @@ public class VehicleTimeStep extends org.apache.avro.specific.SpecificRecordBase
   @Override public void customEncode(org.apache.avro.io.Encoder out)
     throws java.io.IOException
   {
-    out.writeFloat(this.user_id);
+    out.writeLong(this.user_id);
 
     out.writeString(this.time);
 
@@ -585,7 +585,7 @@ public class VehicleTimeStep extends org.apache.avro.specific.SpecificRecordBase
   {
     org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
     if (fieldOrder == null) {
-      this.user_id = in.readFloat();
+      this.user_id = in.readLong();
 
       this.time = in.readString();
 
@@ -609,7 +609,7 @@ public class VehicleTimeStep extends org.apache.avro.specific.SpecificRecordBase
       for (int i = 0; i < 5; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
-          this.user_id = in.readFloat();
+          this.user_id = in.readLong();
           break;
 
         case 1:
