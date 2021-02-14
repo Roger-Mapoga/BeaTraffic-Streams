@@ -1,1 +1,4 @@
 /home/roger/Projects/BeaTraffic-Kafka-Streams/src/test/java/co/za/gmapssolutions/beatraffic/streamsTest/StreamsTests.java
+/home/roger/Projects/BeaTraffic-Kafka-Streams/src/test/java/co/za/gmapssolutions/beatraffic/streamsTest/DataReductionTests.java
+/home/roger/Projects/BeaTraffic-Kafka-Streams/src/test/java/co/za/gmapssolutions/beatraffic/streamsTest/RoutesTest.java
+/home/roger/Projects/BeaTraffic-Kafka-Streams/src/test/java/co/za/gmapssolutions/beatraffic/streamsTest/OeSNNTest.java
